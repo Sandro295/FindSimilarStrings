@@ -23,14 +23,14 @@ int main(int argc, char* argv[])
 		while (true) {			
 			myfile.seekg(0);
 
-			std::cout << "Enter a string to find simular to it in file:" << std::endl;
+			std::cout << "Enter a string to find similar to it in file:" << std::endl;
 			getline(std::cin, searchWord);
 			std::cout << std::endl;
 
 			auto start = std::chrono::high_resolution_clock::now();
 
 			while (std::getline(myfile, line)) {
-				if (simularWord(searchWord, line)) {
+				if (similarWord(searchWord, line)) {
 					std::cout << line << std::endl;
 				}
 			}
