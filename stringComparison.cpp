@@ -1,6 +1,6 @@
 #include "stringComparison.h"
 
-bool simularWord(std::string & target, std::string & line) {
+bool similarWord(std::string & target, std::string & line) {
 
 	int sizeDifference = target.size() > line.size() ? target.size() - line.size() : line.size() - target.size();
 
