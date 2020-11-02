@@ -37,8 +37,8 @@ int main(int argc, char* argv[])
 
 			auto stop = std::chrono::high_resolution_clock::now();
 			auto duration = std::chrono::duration_cast <std::chrono::milliseconds> (stop - start).count();
-
-			std::cout << std::endl << "took " << duration/1000 << "." << duration%1000 << " seconds" << std::endl;
+			auto sec = duration / 1000;
+			std::cout << std::endl << "took " << sec << "." << duration - sec*1000 << " milliseconds" << std::endl;
 			myfile.clear(); // clear fail flag
 		}
 	}
