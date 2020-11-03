@@ -3,6 +3,7 @@
 #include <string>
 #include <chrono>
 #include <fstream>
+#include <iomanip>
 
 int main(int argc, char* argv[])
 {
@@ -23,7 +24,7 @@ int main(int argc, char* argv[])
 		while (true) {			
 			myfile.seekg(0);
 
-			std::cout << "Enter a string to find similar to it in file:" << std::endl;
+			std::cout << "Enter a string to find simular to it in file:" << std::endl;
 			getline(std::cin, searchWord);
 			std::cout << std::endl;
 
@@ -38,7 +39,7 @@ int main(int argc, char* argv[])
 			auto stop = std::chrono::high_resolution_clock::now();
 			auto duration = std::chrono::duration_cast <std::chrono::milliseconds> (stop - start).count();
 			auto sec = duration / 1000;
-			std::cout << std::endl << "took " << sec << "." << duration - sec*1000 << " milliseconds" << std::endl;
+			std::cout << std::endl << "took " << sec << "." << std::setw(3) << std::setfill('0') << duration-sec*1000 << " seconds" << std::endl;
 			myfile.clear(); // clear fail flag
 		}
 	}
