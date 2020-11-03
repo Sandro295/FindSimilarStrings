@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
 		while (true) {			
 			myfile.seekg(0);
 
-			std::cout << "Enter a string to find simular to it in file:" << std::endl;
+			std::cout << "Enter a string to find similar to it in file:" << std::endl;
 			getline(std::cin, searchWord);
 			std::cout << std::endl;
 
