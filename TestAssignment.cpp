@@ -38,7 +38,7 @@ int main(int argc, char* argv[])
 
 			auto start = std::chrono::high_resolution_clock::now();
 
-			for (auto i : allstrings) {
+			for (auto& i : allstrings) {
 				if (!cache.empty()) {
 					auto CachedLine = cache.find(i);
 					if (CachedLine != cache.end()) {
